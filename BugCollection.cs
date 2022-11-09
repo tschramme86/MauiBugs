@@ -13,7 +13,7 @@ namespace MauiBugs
     {
         public static List<MauiBug> Bugs = new() {
             new MauiBug { 
-                Id = "b001", Title = "Line Wrap in Button", 
+                Id = "b001", Title = "Text Wrap in Button", 
                 IsActive = true, LastMauiTestVersion = "7.0.49",
                 StatusAndroid = EnvironmentStatus.NotAffected,
                 StatusWindows = EnvironmentStatus.Affected,
