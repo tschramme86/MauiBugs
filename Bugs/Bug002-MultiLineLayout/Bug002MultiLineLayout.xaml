@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBugs.Bugs.Bug002_MultiLineLayout.Bug002MultiLineLayout"
+             xmlns:local="clr-namespace:MauiBugs.Bugs.Bug002_MultiLineLayout"
+             Title="Bug002MultiLineLayout" x:Name="ctlPage">
+    <Grid ColumnDefinitions="*,300,*">
+        <ScrollView Grid.Column="1">
+            <VerticalStackLayout>
+                <Grid Padding="10" ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+                    <BoxView WidthRequest="24" Grid.Column="0" Color="Blue" VerticalOptions="Fill" />
+
+                    <Label Text="Section Multi Line Heading Label" 
+                            Grid.Row="0" Grid.Column="1" FontSize="16" FontFamily="OpenSansSemibold" />
+                    <Label Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
+                            Grid.Row="1" Grid.Column="1" FontSize="14" FontFamily="OpenSansRegular" />
+
+                    <BoxView WidthRequest="24" Grid.Column="2" Grid.Row="1" Color="Yellow" VerticalOptions="Fill" />
+                </Grid>
+                
+                <Grid Padding="10" ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto,Auto">
+                    <BoxView WidthRequest="24" Grid.Column="0" Color="Blue" VerticalOptions="Fill" />
+
+                    <Label Text="Section Multi Line Heading Labelx" 
+                            Grid.Row="0" Grid.Column="1" FontSize="16" FontFamily="OpenSansSemibold" />
+                    <Label Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
+                            Grid.Row="1" Grid.Column="1" FontSize="14" FontFamily="OpenSansRegular" />
+
+                    <BoxView WidthRequest="24" Grid.Column="2" Grid.Row="1" Color="Yellow" VerticalOptions="Fill" />
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
