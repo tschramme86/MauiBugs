@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiBugs.Bugs.Bug003_TapGestureRecognizer"
+             x:Class="MauiBugs.Bugs.Bug003_TapGestureRecognizer.Bug003TapGestureRecognizer"
+             Title="Bug003TapGestureRecognizer">
+    <VerticalStackLayout Padding="25" Spacing="10">
+        <!-- TapGestureRecognizer on standard label works -->
+        <Label Text="Tap on standard label works:" />
+        <Label BackgroundColor="LightBlue" Text="Tap me!" 
+               VerticalOptions="Center" HorizontalOptions="Center" Padding="25">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <!-- TapGestureRecognizer on label span does NOT work -->
+        <Label Text="Tap on label span does not work:" Margin="0,20,0,0" />
+        <Label BackgroundColor="LightSalmon"
+               VerticalOptions="Center" HorizontalOptions="Center" Padding="25">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Tap the link: " />
+                        <Span Text="Webpage" TextDecorations="Underline" TextColor="DarkBlue">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <!-- TapGestureRecognizer on custom control with Frame does NOT work -->
+        <Label Text="Tap on custom control with Frame does NOT work on Android (it works on Windows):" Margin="0,20,0,0" />
+        <local:CompoundLabel VerticalOptions="Center" HorizontalOptions="Center">
+            <local:CompoundLabel.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </local:CompoundLabel.GestureRecognizers>
+        </local:CompoundLabel>
+    </VerticalStackLayout>
+</ContentPage>

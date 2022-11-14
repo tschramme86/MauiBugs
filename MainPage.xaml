@@ -23,7 +23,7 @@
     <CollectionView ItemsSource="{x:Static local:BugCollection.Bugs}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Grid x:DataType="data:MauiBug" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="4">
+                <Grid x:DataType="data:MauiBug" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="4" BackgroundColor="White">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnTapBugItem" />
                     </Grid.GestureRecognizers>

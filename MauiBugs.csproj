@@ -53,9 +53,16 @@
 	  <MauiXaml Update="Bugs\Bug002-MultiLineLayout\Bug002MultiLineLayout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Bugs\Bug003-TapGestureRecognizer\Bug003TapGestureRecognizer.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Bugs\Bug003-TapGestureRecognizer\CompoundLabel.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Bugs\Bug004-FlexLayoutHeight\" />
 	  <Folder Include="Resources\Strings\" />
 	</ItemGroup>
 
